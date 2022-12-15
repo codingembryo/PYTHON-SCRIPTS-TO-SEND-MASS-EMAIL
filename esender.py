@@ -4,16 +4,16 @@ from email.message import EmailMessage
 
 
 
-sender = ''
-password = ''#type the app password you geenrated
+sender = 'simchm@gmail.com'
+password = 'twefelthvmzewbvs'#type the app password you geenrated
 
-subject = 'Looking for a remote job?'#add the subject
-body_message = 'Check out this page'#Type the message
+subject = 'Looking for a job?'#add the subject
+body_message = 'We are hiring, https://greenmerit.netlify.app/'#Type the message
 
 
 #connect to outgoing mail sender
 context = ssl.create_default_context()
-server =  smtplib.SMTP_SSL('smtp.gmail.com', 587, context = context)
+server =  smtplib.SMTP_SSL('smtp.gmail.com', 465, context = context)
 server.login(sender, password)
 
 #Formula to send email
